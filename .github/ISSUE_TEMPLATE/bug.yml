@@ -1,0 +1,58 @@
+name: Relato de Bug
+description: Reporte um comportamento inesperado ou erro
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Obrigado por reportar! Preencha os campos abaixo para agilizar a investigação.
+
+  - type: input
+    id: ambiente
+    attributes:
+      label: Ambiente
+      description: "Onde o bug ocorre? Ex: produção, staging, local"
+      placeholder: "produção / staging / local"
+    validations:
+      required: true
+
+  - type: textarea
+    id: descricao
+    attributes:
+      label: Descrição do problema
+      description: Descreva o que acontece de forma objetiva.
+      placeholder: "Ao clicar em X, o sistema faz Y em vez de Z."
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproducao
+    attributes:
+      label: Passos para reproduzir
+      description: Liste os passos necessários para reproduzir o bug.
+      placeholder: |
+        1. Acesse a página X
+        2. Clique em Y
+        3. Observe o erro Z
+    validations:
+      required: true
+
+  - type: textarea
+    id: esperado
+    attributes:
+      label: Comportamento esperado
+      description: O que deveria acontecer?
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidencias
+    attributes:
+      label: Evidências
+      description: Screenshots, logs, stack traces — cole ou anexe aqui.
+
+  - type: textarea
+    id: contexto
+    attributes:
+      label: Contexto adicional
+      description: Versão, browser, OS, ou qualquer outra informação relevante.

@@ -1,0 +1,59 @@
+name: Dívida Técnica
+description: Registre refatorações, melhorias de qualidade ou débitos de arquitetura
+labels: ["tech-debt"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use este template para registrar código legado, gambiarras, cobertura de testes insuficiente
+        ou decisões de arquitetura que precisam ser revisadas.
+
+  - type: input
+    id: area
+    attributes:
+      label: Área afetada
+      description: "Módulo, serviço ou arquivo principal envolvido."
+      placeholder: "ex: auth, api/contratos, prisma/schema"
+    validations:
+      required: true
+
+  - type: textarea
+    id: descricao
+    attributes:
+      label: Descrição da dívida
+      description: Descreva o problema técnico existente e seu impacto atual.
+    validations:
+      required: true
+
+  - type: textarea
+    id: solucao
+    attributes:
+      label: Solução desejada
+      description: Como deveria ficar após a resolução?
+    validations:
+      required: true
+
+  - type: dropdown
+    id: impacto
+    attributes:
+      label: Impacto se não resolvido
+      options:
+        - Baixo — só incomoda
+        - Médio — dificulta manutenção
+        - Alto — risco de bug ou regressão
+        - Crítico — bloqueia evolução
+    validations:
+      required: true
+
+  - type: textarea
+    id: esforco
+    attributes:
+      label: Esforço estimado
+      description: "Estimativa de tempo/complexidade para resolver."
+      placeholder: "ex: 2-4h, 1 dia, sprint inteira"
+
+  - type: textarea
+    id: contexto
+    attributes:
+      label: Contexto adicional
+      description: Links de código, PRs relacionados, decisões passadas etc.

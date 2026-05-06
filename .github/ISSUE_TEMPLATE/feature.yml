@@ -1,0 +1,49 @@
+name: Solicitação de Funcionalidade
+description: Proponha uma nova funcionalidade ou melhoria
+labels: ["feature"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Descreva a funcionalidade que você gostaria de ver implementada.
+
+  - type: textarea
+    id: problema
+    attributes:
+      label: Qual problema essa funcionalidade resolve?
+      description: Contextualize o problema ou necessidade atual.
+      placeholder: "Atualmente não é possível X, o que causa Y."
+    validations:
+      required: true
+
+  - type: textarea
+    id: solucao
+    attributes:
+      label: Solução proposta
+      description: Descreva como você imagina a funcionalidade funcionando.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternativas
+    attributes:
+      label: Alternativas consideradas
+      description: Você já pensou em outras formas de resolver? Descreva.
+
+  - type: dropdown
+    id: prioridade
+    attributes:
+      label: Prioridade estimada
+      options:
+        - Baixa
+        - Média
+        - Alta
+        - Crítica
+    validations:
+      required: true
+
+  - type: textarea
+    id: contexto
+    attributes:
+      label: Contexto adicional
+      description: Mockups, referências, links ou qualquer informação extra.
